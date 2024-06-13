@@ -57,6 +57,10 @@ public:
         // this function searches the currentnode of the specified node as well as the current node of its parents
         currentNode = ROOT;
         parent = nullptr;
+        while ((currentNode != nullptr) && (currentNode->info != element))
+        {
+
+        }
     }
 };
 

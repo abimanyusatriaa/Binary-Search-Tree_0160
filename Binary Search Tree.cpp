@@ -101,5 +101,19 @@ public:
 
 int main()
 {
-    
+    BinaryTrees x;
+    while (true)
+    {
+        cout << "\nMenu" << endl;
+        cout << "1. Implement Insert operation" << endl;
+        cout << "2. Perform inorder tranversal" << endl;
+        cout << "3. Perform preorder tranversal" << endl;
+        cout << "4. Perform postorder tranversal" << endl;
+        cout << "5. Exit" << endl;
+        cout << "\nEnter your choice (1-5) : ";
+
+        char ch;
+        cin >> ch;
+        cout << endl;
+    }
 }

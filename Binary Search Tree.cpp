@@ -26,7 +26,10 @@ public:
     {
         ROOT = nullptr;
     }
-
+    void insert(string element)
+    {
+        Node*
+    }
 };
 
 int main()

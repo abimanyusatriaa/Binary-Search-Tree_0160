@@ -13,10 +13,21 @@ public:
     Node(string i, Node* l, Node* r)
     {
         info = i;
+        leftchild = l;
+        rightchild = r;
+    }
+}
 
+class BinaryTrees
+{
+public:
+    Node* ROOT;
+    BinaryTrees()
+    {
+        ROOT = nullptr;
     }
 
-}
+};
 
 int main()
 {

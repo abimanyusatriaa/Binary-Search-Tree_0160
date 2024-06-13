@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-class Node 
+class Node
 {
 public:
     string info;
@@ -16,7 +16,7 @@ public:
         leftchild = l;
         rightchild = r;
     }
-}
+};
 
 class BinaryTrees
 {
@@ -36,6 +36,11 @@ public:
         Node* parent = nullptr;
         Node* currentNode = nullptr;
         search(element, parent, currentNode);
+
+        if (parent == nullptr)
+        {
+
+        }
     }
 };
 

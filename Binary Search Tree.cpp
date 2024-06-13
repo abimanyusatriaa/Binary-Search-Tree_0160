@@ -18,11 +18,11 @@ public:
     }
 };
 
-class BinaryTrees
+class BinaryTree
 {
 public:
     Node* ROOT;
-    BinaryTrees()
+    BinaryTree()
     {
         ROOT = nullptr;
     }
@@ -97,11 +97,26 @@ public:
         }
     }
 
+    void postorder(Node* ptr)
+    {
+        if (ROOT == nullptr)
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        if (ptr != nullptr)
+        {
+            preorder(ptr->leftchild);
+            preorder(ptr->rightchild);
+            cout << ptr->info << " ";
+        }
+    }
+
 };
 
 int main()
 {
-    BinaryTrees x;
+    BinaryTree x;
     while (true)
     {
         cout << "\nMenu" << endl;
@@ -115,5 +130,42 @@ int main()
         char ch;
         cin >> ch;
         cout << endl;
+
+        switch (ch)
+        {
+        case '1':
+        {
+            cout << "Enter a word: ";
+            string word;
+            cin >> word;
+            x.insert(word);
+            break;
+        }
+        case '2':
+        {
+            x.inorder(x.ROOT);
+            break;
+        }
+        case '3':
+        {
+            x.preorder(x.ROOT);
+            break;
+        }
+        case '4':
+        {
+            x.postorder(x.ROOT);
+            break;
+        }
+        case '5':
+        {
+            return 0;
+        }
+        default:
+        {
+            cout << "Invalid option" << endl;
+            break;
+        }
+        }
     }
+    return 0;
 }
